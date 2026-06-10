@@ -3,65 +3,59 @@
 This repository contains an **End-to-End (E2E)** automation suite focused on testing the **Login functionality** of the [Saucedemo](https://www.saucedemo.com/) application.  
 It uses **WebdriverIO** with **Cucumber (BDD)** and follows the **Page Object Model (POM)** structure for clarity and scalability.
 
-
 ## Key Features
 
-- **Behavior-Driven Development (BDD):** Tests are written in Gherkin (`.feature` files) for better readability and collaboration.  
-- **Page Object Model (POM):** Maintains separation between UI elements and test logic.  
-- **Cross-browser execution:** Configured for Chrome, Firefox, and Edge.  
+- **Behavior-Driven Development (BDD):** Tests are written in Gherkin (`.feature` files) for better readability and collaboration.
+- **Page Object Model (POM):** Maintains separation between UI elements and test logic.
+- **Cross-browser execution:** Configured for Chrome, Firefox, and Edge.
 - **Validation coverage:** Handles both positive and negative login scenarios with robust input handling.
-
 
 ## Requirements
 
 - Node.js
-- npm 
-- Git  
+- npm
+- Git
 
 ## Required browsers
 
-- Google Chrome  
-- Mozilla Firefox  
-- Microsoft Edge  
-
-
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
 
 ## Installation
 
 ```bash
-git clone https://github.com/OtrAle/epam-final-proyect
+git clone https://github.com/OtrAle/saucedemo-wdio-bdd
 npm install
 ```
-
 
 ## Execution Commands
 
 Run from the project root directory:
 
-| Command | Description |
-|----------|-------------|
-| `npm run wdio` | Runs all login tests across all configured browsers. |
-| `npm run test:smoke` | Runs test with the tag "smoke" |
-| `npm run test:regression` | Runs test with the tag "regression" |
-| `npm run test:negative` | Runs test with the tag "negative" |
-
+| Command                   | Description                                          |
+| ------------------------- | ---------------------------------------------------- |
+| `npm run wdio`            | Runs all login tests across all configured browsers. |
+| `npm run test:smoke`      | Runs test with the tag "smoke"                       |
+| `npm run test:regression` | Runs test with the tag "regression"                  |
+| `npm run test:negative`   | Runs test with the tag "negative"                    |
 
 ## Project Structure
 
-| Path | Purpose |
-|------|----------|
-| `/features/login.feature` | Contains the Gherkin scenarios for Login validation. |
-| `/stepdefinitions/login.steps.js` | Step definitions implementing the login logic. |
-| `/pageobjects/` | Page Objects for selectors and login-related actions. |
-| `/config/wdio.conf.js` | WebdriverIO configuration file. |
-| `package.json` | Dependencies and npm scripts. |
+| Path                              | Purpose                                               |
+| --------------------------------- | ----------------------------------------------------- |
+| `/features/login.feature`         | Contains the Gherkin scenarios for Login validation.  |
+| `/stepdefinitions/login.steps.js` | Step definitions implementing the login logic.        |
+| `/pageobjects/`                   | Page Objects for selectors and login-related actions. |
+| `/config/wdio.conf.js`            | WebdriverIO configuration file.                       |
+| `package.json`                    | Dependencies and npm scripts.                         |
 
+## Test Scenarios Covered
 
-##  Test Scenarios Covered
-- ✅ **Successful login** with valid credentials (standard, problem, error, visual users)  
-- ❌ **Login with empty fields** (username and/or password cleared)  
-- ❌ **Login with invalid credentials** (non-existent users, wrong passwords, case sensitivity, leading/trailing spaces)  
-- ❌ **Locked-out account login**  
+- ✅ **Successful login** with valid credentials (standard, problem, error, visual users)
+- ✅ **Login with empty fields** (username and/or password cleared)
+- ✅ **Login with invalid credentials** (non-existent users, wrong passwords, case sensitivity, leading/trailing spaces)
+- ✅ **Locked-out account login**
 
 ---
 

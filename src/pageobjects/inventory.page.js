@@ -14,7 +14,7 @@ class InventoryPage extends Page {
     }
 
   get expectedPath() {
-        return '/inventory.html';; 
+        return '/inventory.html'; 
     }
 }
 
